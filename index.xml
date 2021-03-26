@@ -13,12 +13,12 @@
     
 
     <item>
-      <title>LightSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search</title>
+      <title>LinearSpeech: Parallel Text-to-Speech with Linear Complexity</title>
       <link>https://zhangfanruo.github.io/zhangfanruo/</link>
       <pubDate>Tue, 03 Nov 2020 12:00:00 +0801</pubDate>
       
       <guid>https://zhangfanruo.github.io/zhangfanruo/</guid>
-      <description>Authors  Renqian Luo (University of Science and Technology of China) lrq@mail.ustc.edu.cn Xu Tan (Microsoft Research) xuta@microsoft.com Rui Wang (Microsoft Research) ruiwa@microsoft.com Tao Qin (Microsoft Research) taoqin@microsoft.com Enhong Chen (University of Science and Technology of China) cheneh@ustc.edu.cn Tie-Yan Liu (Microsoft Research) tyliu@microsoft.com  Abstract Text to speech (TTS) has been broadly used to synthesize natural and intelligible speech in different scenarios. Deploying TTS in various end devices such as mobile phones or embedded devices requires extremely small memory usage and inference latency.</description>
+      <description> </description>
     </item>
     
     
