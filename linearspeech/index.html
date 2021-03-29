@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../css/custom.css">
 <link rel="alternate" href="index.xml" type="application/rss+xml" title="Speech Research">
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-<title>LightSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search - Speech Research</title>
+<title>LinearSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search - Speech Research</title>
 </head>
 <body>
 
@@ -27,7 +27,7 @@
 
 	<main role="main">
 		<article itemscope itemtype="https://schema.org/BlogPosting">
-            <h1 class="entry-title" itemprop="headline">LightSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search</h1>
+            <h1 class="entry-title" itemprop="headline">LinearSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search</h1>
 			
 			<section itemprop="entry-text">
 				<br>
@@ -43,64 +43,64 @@
 <h2 id="abstract">Abstract</h2>
 <p>Non-autoregressive text to speech (TTS) models such as FastSpeech can synthesize speech significantly faster than previous autoregressive models with comparable quality. However, the memory and computational complexity O(N^2) of self-attention hinders FastSpeech from generating long sequences, where N is the length of mel-spectrograms. In this work, we propose LinearSpeech, an efficient parallel text-to-speech model with O(N) time and memory complexity. Firstly, We replace standard attention modules in the decoder of the model with linear attention modules to reduce the time and memory cost. Secondly, we add a novel positional encoding to standard and linear attention modules, which enable the model to learn relative order of input sequence and synthesizing long mel-spectrograms. Furthermore, we use reversible residual layers instead of the standard residuals, which reduce the memory consumption in training stage. In our experiments, LinearSpeech can generate much longer sequences than FastSpeech with much a lower memory and computational cost. Our subjective listening test also shows that the speech quality of LinearSpeech is comparable to FastSpeech.</p>
 <!--## Model Architecture-->
-<!--<img src="../images/lightspeech/.jpg" width="100%"/>-->
+<!--<img src="../images/LinearSpeech/.jpg" width="100%"/>-->
 <h2 id="audio-samples">Audio Samples</h2>
-<p>All of the audio samples use Parallel WaveGAN (PWG) as vocoder.</p>
-<h3 id="compare-to-fastspeech-2">Compare to FastSpeech 2</h3>
-<p>*The general solidity of a page is much to be sought for.</p>
+<p>All of the audio samples use HIFIGAN as vocoder.</p>
+<h3 id="compare-to-fastspeech">Compare to FastSpeech</h3>
+<p>*这种#1车票#1和#1保险单#1捆绑#1出售#2属于#1重复性#1购买#4。</p>
 <table><thead>
 <tr>
-<th style="text-align: center">FastSpeech 2</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">FastSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
 <tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0001.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0001.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skip009905.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skipl009905.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-<p>*The modern printer, in the teeth of the evidence given by his own eyes, considers the single page as the unit, and prints the page in the middle of his paper.</p>
+<p>*他们#1骑着#1摩托#1回家#3，正好#1为农忙#1时的#1父母#1帮忙#4。</p>
 <table><thead>
 <tr>
 <th style="text-align: center">FastSpeech 2</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
-<tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-</tr>
+  <tr>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skip009908.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skipl009908.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    </tr>
 </tbody></table>
-<p>*For where these are boldly and carefully designed, and each letter is thoroughly individual in form.</p>
+<p>*这几天#1雨水#1不断#3，人们#1恨不得#1待在#1家里#1不出门#4。</p>
 <table><thead>
 <tr>
 <th style="text-align: center">FastSpeech 2</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
-<tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0003.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0003.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-</tr>
+  <tr>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skip009910.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skipl009910.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    </tr>
 </tbody></table>
-<p>*The words may be set much closer together, without loss of clearness.</p>
+<p>*藤村#1此番#1发言#2可能是#1为了#1凸显#1野田的#1领导#1能力#4。</p>
 <table><thead>
 <tr>
 <th style="text-align: center">FastSpeech 2</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
-<tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0004.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0004.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-</tr>
+  <tr>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skip009912.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skipl009912.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    </tr>
 </tbody></table>
-<p>*No definite rules, however, except the avoidance of &ldquo;rivers&rdquo; and excess of white, can be given for the spacing.</p>
+<p>*南海#1海域#1综合#1补给#1基地#1码头#1项目#2正在#1论证中#4。</p>
 <table><thead>
 <tr>
 <th style="text-align: center">FastSpeech 2</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
-<tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0005.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0005.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-</tr>
+  <tr>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skip009914.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="../audio/linearspeech/skipl009914.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    </tr>
 </tbody></table>
 <h3 id="ablation-study">Ablation Study</h3>
 <p>FastSpeech 2*: manually designed lightweight FastSpeech 2 model.</p>
@@ -110,13 +110,13 @@
 <th style="text-align: center">FastSpeech 2</th>
 <th style="text-align: center">FastSpeech 2*</th>
 <th style="text-align: center">Random Search</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
 <tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0006.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice3/0006.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice4/0006.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0006.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice1/0006.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice3/0006.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice4/0006.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice2/0006.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
 <p>*Only nominally so, however, in many cases, since when he uses a headline he counts that in.</p>
@@ -125,13 +125,13 @@
 <th style="text-align: center">FastSpeech 2</th>
 <th style="text-align: center">FastSpeech 2*</th>
 <th style="text-align: center">Random Search</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
 <tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0007.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice3/0007.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice4/0007.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0007.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice1/0007.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice3/0007.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice4/0007.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice2/0007.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
 <p>*From the time when books first took their present shape till the end of the sixteenth century, or indeed later.</p>
@@ -140,13 +140,13 @@
 <th style="text-align: center">FastSpeech 2</th>
 <th style="text-align: center">FastSpeech 2*</th>
 <th style="text-align: center">Random Search</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
 <tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice3/0008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice4/0008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice1/0008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice3/0008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice4/0008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice2/0008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
 <p>*The paper on which the printing is to be done is a necessary part of our subject.</p>
@@ -155,13 +155,13 @@
 <th style="text-align: center">FastSpeech 2</th>
 <th style="text-align: center">FastSpeech 2*</th>
 <th style="text-align: center">Random Search</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
 <tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0009.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice3/0009.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice4/0009.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0009.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice1/0009.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice3/0009.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice4/0009.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice2/0009.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
 <p>*Of this it may be said that though there is some good paper made now.</p>
@@ -170,27 +170,16 @@
 <th style="text-align: center">FastSpeech 2</th>
 <th style="text-align: center">FastSpeech 2*</th>
 <th style="text-align: center">Random Search</th>
-<th style="text-align: center">LightSpeech</th>
+<th style="text-align: center">LinearSpeech</th>
 </tr></thead><tbody>
 <tr>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice1/0010.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice3/0010.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice4/0010.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="../audio/lightspeech/voice2/0010.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice1/0010.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice3/0010.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice4/0010.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="../audio/LinearSpeech/voice2/0010.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody></table>
-<h2 id="our-related-works">Our Related Works</h2>
-<p><a href="https://arxiv.org/abs/1808.07233">Neural Architecture Optimization</a>
-<br>
-<a href="https://arxiv.org/abs/2007.04785">Neural Architecture Search with GBDT</a>
-<br>
-<a href="/fastspeech/">FastSpeech: Fast, Robust and Controllable Text to Speech</a>
-<br>
-<a href="/fastspeech2/">FastSpeech 2: Fast and High-Quality End-to-End Text to Speech</a>
-<br>
-<a href="/LRSpeech/">LRSpeech: Extremely Low-Resource Speech Synthesis and Recognition</a>
-<br>
-<a href="/unsuper/">Almost Unsupervised Text to Speech and Automatic Speech Recognition</a></p>
+
 
 			</section>
 		</article>
