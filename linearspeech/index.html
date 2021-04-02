@@ -27,7 +27,7 @@
 
 	<main role="main">
 		<article itemscope itemtype="https://schema.org/BlogPosting">
-            <h1 class="entry-title" itemprop="headline">LinearSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search</h1>
+            <h1 class="entry-title" itemprop="headline">LinearSpeech: Parallel Text-to-Speech with Linear Complexity</h1>
 			
 			<section itemprop="entry-text">
 				<br>
@@ -35,9 +35,9 @@
 <h2 id="authors">Authors</h2>
 <ul>
 <li>Haozhe Zhang (Key Laboratory of Speech Acoustics & Content Understanding, Institute of Acoustics) <a href="zhanghaozhe@hccl.ioa.ac.cn">zhanghaozhe@hccl.ioa.ac.cn</a></li>
-<li>Ziyi Chen (Key Laboratory of Speech Acoustics & Content Understanding, Institute of Acoustics) </li>
-<li>Zengqiang Shang (Key Laboratory of Speech Acoustics & Content Understanding, Institute of Acoustics) </li>
-<li>Bolin Zhou (Key Laboratory of Speech Acoustics & Content Understanding, Institute of Acoustics) </li>
+<li>Zengqiang Shang (Key Laboratory of Speech Acoustics & Content Understanding, Institute of Acoustics) <a href="shangzengqiang@hccl.ioa.ac.cn">zhanghaozhe@hccl.ioa.ac.cn</a></li>
+<li>Pengyuan Zhang (Key Laboratory of Speech Acoustics & Content Understanding, Institute of Acoustics) <a href="zhangpengyuan@hccl.ioa.ac.cn">zhanghaozhe@hccl.ioa.ac.cn</a></li>
+
 
 </ul>
 <h2 id="abstract">Abstract</h2>
@@ -103,6 +103,22 @@
     </tr>
 </tbody></table>
 
+<h2 id="inference-speedup">Inference Speedup</h2>
+<p>The evaluation experiments are conducted on the server with 12 Intel Xeon CPU, 256GB memory and 1 NVIDIA V100 GPU.</p>
+<p>Compared with autoregressive Transformer TTS, our model speeds up the mel-spectrogram generation by 270x and the end-to-end speech synthesis by 38x.</p>
+<table><thead>
+<tr>
+<th style="text-align: center">Inference Time vs. Mel Length (FastSpeech)</th>
+<th style="text-align: center">Inference Time vs. Mel Length (Transformer TTS)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center">
+<img src="../images/fastspeech/infer_time_plot1.png" width="100%"/>
+</td>
+<td style="text-align: center">
+<img src="../images/fastspeech/infer_time_plot2.png" width="100%"/>
+</td>
+</tr>
 
 
 			</section>
